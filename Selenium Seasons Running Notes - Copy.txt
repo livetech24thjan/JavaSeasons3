@@ -2926,3 +2926,169 @@ getStringCellValue():String
 
 getBooleanCellValue():boolean 
 
+-----------------------------------
+
+how to write to an excel ?
+
+
+case 1 : modifying an existing cell 
+
+case 2: creating a cell in an existing row
+
+case 3: creating a row and cell in it 
+
+
+
+===========================================
+Properties File 
+
+
+like a flat file to store key and values both in form of Strings 
+
+how to read properties file 
+
+In Java , if you want to read any file (.xlsx, .txt , .properties , .json etc )
+
+we need to create FileInputStream class Object 
+
+
+FileInputStream (java.io)
+
+FileInputStream(File)
+FileInputStream(FileDescriptor)
+FileInputStream(String)		==> here String means the path of the file including extension
+
+
+Properties (java.util)
+
+Properties() ==>use this 
+Properties(int)
+Properties(Properties)
+
+Methods in Properties class :
+
+load(InputStream)
+getProperty(String):String 
+here String argument is key in properties file 
+and return-type String is value in properties file
+
+
+----------------------------------
+
+Map(I) 
+
+HashMap (C) 
+
+public class HashMap<K,V> extends AbstractMap<K,V>
+    implements Map<K,V>, Cloneable, Serializable {
+
+101	Ravi
+102 Gopi
+103 Ram 
+
+ 
+HashMap()  ==> we will use default constructor , here capacity is 16
+HashMap(int)
+HashMap(int, float)
+HashMap(Map<? extends K, ? extends V>)
+
+Map (I) : 
+
+sub interface : Entry<K, V>
+
+Methods in Map(I) or HashMap (C): 
+
+
+put(K, V):V , here K and V can be of any DataType 
+
+
+size():int ==> gives no of entries 
+
+get(Object):V ==> 
+
+containsKey(Object):boolean 
+
+containsValue(Object):boolean 
+
+
+Method in Entry (I) : 
+
+getKey():K
+getValue():V
+
+setValue(V):V 
+
+
+=====================================================
+Selenium Season - 3
+
+
+							Frameworks
+
+
+			In-built					userdefined 
+				or
+			Predefined	
+								
+			- Junit						- DataDriven 
+			- TestNG					- Keyword Driven
+										- Hybrid Framework
+										- Behaviour Driven Development (BDD) 
+										
+										
+DataDriven Framework : 
+
+
+Test Data will be present in some sources like (Excel , txt , json , csv, properties etc )
+
+will drive your test scripts 
+										
+			
+Project Folder Structure : 
+
+src/main/java
+	
+src/main/resources
+
+src/test/java
+	|
+	base
+		- BaseTest
+	|
+	utils
+		- UtilKit
+	|
+	testscripts
+		 |	
+		 regression
+		 |
+		 smoke
+		 |
+		 sanity
+		 |
+		 sprint
+	
+	
+
+src/test/resources
+	|
+	testdata
+		|
+		excels
+		|
+		jsons
+		
+	|
+	properties
+		- config.properties 
+
+								
+								
+								
+								
+
+
+
+
+
+
